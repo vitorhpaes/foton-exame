@@ -1,0 +1,18 @@
+section#home {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hello {
+  margin: 20px 40px;
+  font-family: SFProDisplay;
+  text-align: left;
+  font-size: 24px;
+}
+
+.hello span {
+  color: #FF6978;
+}
