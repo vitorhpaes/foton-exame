@@ -4,10 +4,11 @@ section#home {
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 18px;
 }
 
 .hello {
-  margin: 20px 40px;
+  margin: 20px 0;
   font-family: SFProDisplay;
   text-align: left;
   font-size: 24px;
