@@ -24,3 +24,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-family: 'SFProDisplay';
   src: url('./Assets/fonts/SFProDisplay.ttf')
 }
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('./Assets/fonts/PlayfairDisplay.ttf')
+}

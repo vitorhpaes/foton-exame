@@ -2,4 +2,64 @@
   border-radius: 5px;
   padding: 15px 20px;
   margin-right: 10px;
+  max-height: 140px;
+  width: 300px;
+  color: #fefefe;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+}
+
+.discover-book-card .left-content {
+  overflow-y: auto;
+  position: relative;
+}
+
+.discover-book-card .left-content .relevance .icon {
+  margin-right: 4px;
+  font-size: 14px;
+}
+.discover-book-card .left-content .relevance {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.discover-book-card .left-content .relevance span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.discover-book-card h2.book-title {
+  margin: 0;
+  font-family: PlayfairDisplay;
+  letter-spacing: 3px;
+  max-width: 100%;
+  white-space: nowrap;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.discover-book-card .authors {
+  margin: 0;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.discover-book-card .authors span.first-author {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.discover-book-card .book-image img {
+  max-height: 100%;
 }
