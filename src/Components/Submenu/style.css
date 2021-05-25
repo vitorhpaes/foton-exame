@@ -1,0 +1,24 @@
+.submenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 59px;
+  background-color: #fff;
+}
+
+.submenu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submenu-item span.icon {
+  font-size: 20px;
+}
+.submenu-item span.title {
+  font-size: 10px;
+}
