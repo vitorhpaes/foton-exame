@@ -1,9 +1,10 @@
 .search-box {
   display: flex;
-  width: 100%;
+  width: calc(100% - 36px);
   margin-top: 40px;
   position: relative;
   height: 48px;
+  margin: 40px 18px 0 18px;
 }
 
 .search-icon {

@@ -1,8 +1,11 @@
+.home-default-section {
+  margin: 0 18px 0 18px;
+}
+
 .home-default-section .section-body {
   display: flex;
   font-family: SFProText!important;
   font-weight: 900;
-  overflow-x: auto;
 }
 .home-default-section .title {
   width: 100%;

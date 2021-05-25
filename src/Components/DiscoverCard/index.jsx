@@ -15,7 +15,7 @@ function DiscoverCard({ book }) {
   const colorKey = randomize(0, 2);
   const myColor = randomColor[colorKey];
 
-  return <div className="discover-book-card" style={{ backgroundColor: myColor }}>
+  return (<div className="discover-book-card" style={{ backgroundColor: myColor }}>
 
     <div className="left-content" style={{ maxWidth: book.imageLinks ? "70%" : 'none' }}>
       <h2 className="book-title">{book.title}</h2>
@@ -34,7 +34,7 @@ function DiscoverCard({ book }) {
       <img src={book.imageLinks.smallThumbnail}></img>
     </div>}
 
-  </div>;
+  </div>);
 }
 
 export default DiscoverCard;

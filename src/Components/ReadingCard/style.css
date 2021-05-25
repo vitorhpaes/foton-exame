@@ -1,0 +1,79 @@
+.reading-book-card {
+  /* background-color: #EEF5DB; */
+  background-color: #758644;
+
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 25px 0 25px 0;
+  margin-right: 10px;
+  max-height: 100px;
+  overflow: visible;
+  width: calc(100% - 44px);
+  color: #2A2B26;
+  text-overflow: ellipsis;
+  display: flex;
+  box-shadow: 0px 3px 45px rgba(121, 141, 67, 0.115084);
+  border-radius: 0px 3px 3px 0px;
+  margin-left: -18px;
+}
+
+.reading-book-card .right-content {
+  overflow-y: auto;
+  position: relative;
+  margin-left: 8px;
+}
+
+.reading-book-card .right-content .part .icon {
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.reading-book-card .right-content .part {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.reading-book-card .right-content .part span {
+  font-weight: 400;
+  margin-left: 4px;
+  color: #ff6978;
+  margin-right: 4px;
+}
+
+.reading-book-card h2.book-title {
+  margin: 0;
+  font-size: 20px;
+  font-family: PlayfairDisplay;
+  letter-spacing: 3px;
+  max-width: 100%;
+  white-space: nowrap;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reading-book-card .authors {
+  margin: 0;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.reading-book-card .authors span.first-author {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.reading-book-card .book-image img {
+  max-height: 130px;
+  margin-top: -30px;
+}

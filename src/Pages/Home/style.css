@@ -4,15 +4,15 @@ section#home {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 18px 30px 18px;
   overflow-y: auto;
+  padding-bottom: 30px;
 }
 
 .hello {
-  margin: 20px 0;
   font-family: SFProDisplay;
   text-align: left;
   font-size: 24px;
+  margin: 30px 18px;
 }
 
 .hello span {

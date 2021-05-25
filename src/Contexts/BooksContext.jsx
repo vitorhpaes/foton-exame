@@ -4,7 +4,7 @@ const BookContext = createContext({});
 
 export const BookProvider = ({ children }) => {
 
-  const [reading, setReading] = useState([]);
+  const [reading, setReading] = useState(['eLRhDgAAQBAJ']);
 
   useEffect(() => {
     getLocalReading();
