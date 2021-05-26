@@ -27,8 +27,8 @@ app.use(function (req, res) {
     return res.sendFile(path.join(__dirname, '../front/build', 'index.html'));
 });
 
-app.listen(process.env.SERVER_PORT || 3000, () => {
-    console.log(`Aberto na porta ${process.env.SERVER_PORT}!`);
+app.listen(3000, () => {
+    console.log(`Aberto na porta 3000!`);
 });
 
 module.exports = app;

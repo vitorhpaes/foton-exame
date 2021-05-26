@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     try {
 
         const {
-            filter,
+            query,
         } = req.query;
 
         const getBooks = knex('book').select('*');
@@ -19,10 +19,10 @@ router.get('/', async (req, res) => {
             author: 'book_author'
         }, 'author.bookId', 'book.id').select('author.*');
 
-        if (filter) {
+        if (query) {
             getBooks.where(function () {
-                this.where('book.name', 'like', `%${filter}%`)
-                    .orWhere('author.name', 'like', `%${filter}%`);
+                this.where('book.name', 'like', `%${query}%`)
+                    .orWhere('author.name', 'like', `%${query}%`);
             });
         }
 
@@ -88,13 +88,13 @@ router.post('/', async (req, res) => {
         const authorsArray = authors.split(',');
 
         try {
-            const authorsInserted = await Promise.all(authorsArray.map(author => {
+            const authorsInserted = await Promise.all(authorsArray.map(async author => {
 
                 const authorObject = {
                     name: author.trim(),
                     bookId: newBookId
                 };
-                const authorInsert = knex('book_author').insert(authorObject);
+                const authorInsert = await knex('book_author').insert(authorObject);
                 const newAuthorId = authorInsert[0];
 
                 return {
@@ -105,14 +105,14 @@ router.post('/', async (req, res) => {
             }));
 
             const bookWithAuthors = {
-                ...book,
+                ...bookReturning,
                 authors: authorsInserted
             };
 
             return res.json({
                 book: bookWithAuthors
             })
-            
+
         } catch (e) {
             console.log('====================================');
             console.log(e);
