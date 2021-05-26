@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 
 // Importanto rotas
-const user = require('./routes/user');
+const book = require('./routes/book');
 
 // Middlewares usados pelo express
 app.use(helmet())
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors())
 
 // Rotas
-app.use('/api/user', user);
+app.use('/api/book', book);
 
 app.use(function (req, res) {
     if (process.env.NODE_ENV === 'development') return;
