@@ -22,13 +22,13 @@ app.use(cors())
 // Rotas
 app.use('/api/book', book);
 
-app.use(function (req, res) {
-    if (process.env.NODE_ENV === 'development') return;
-    return res.sendFile(path.join(__dirname, '../front/build', 'index.html'));
-});
+// app.use(function (req, res) {
+//     if (process.env.NODE_ENV === 'development') return;
+//     return res.sendFile(path.join(__dirname, '../front/build', 'index.html'));
+// });
 
 app.listen(3000, () => {
-    console.log(`Aberto na porta 3000!`);
+    console.log(`Aberto na porta 3333!`);
 });
 
 module.exports = app;
