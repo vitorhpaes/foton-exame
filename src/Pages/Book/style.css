@@ -1,0 +1,113 @@
+section#description {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.header {
+  height: 290px;
+  background-color: #FFF6E5;
+  border-bottom-right-radius: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header .background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header .background-image,
+.header .background-image img {
+  width: 100%;
+}
+
+.header .book-image {
+  position: absolute;
+  top: 110px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header .book-image img {
+  top: 150px;
+  height: 234px;
+}
+
+.header .return {
+  position: absolute;
+  top: 55px;
+  left: 33px;
+  font-size: 30px;
+}
+
+.body {
+  padding: 0 20px;
+  margin-top: 70px;
+  padding-bottom: 100px;
+}
+
+.body p.description {
+  text-align: left;
+}
+
+.body .book-title {
+  text-align: left;
+  margin: 0;
+  font-size: 24px;
+  font-family: SFProDisplay;
+  color: #36383A;
+}
+.body .book-authors {
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+  font-family: SFProDisplay;
+  color: #FF6978;
+}
+
+.footer {
+  position: fixed;
+  bottom: 53px;
+  width: 100vw;
+}
+
+.footer .group-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  box-shadow: 3px 3px 23px rgba(107, 103, 70, 0.125901);
+}
+
+.footer .group-buttons div.divisory {
+  margin: 0;
+  height: 16px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid rgba(151, 151, 151, 0.2);
+}
+
+.footer .group-buttons button {
+  background: none;
+  border: none;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: SFProDisplay;
+  font-weight: 900;
+  color: #3F4043;
+}
+
+.footer .group-buttons button .button-icon {
+  margin-right: 4px;
+  font-size: 20px;
+  color: #CFCBD2;
+}

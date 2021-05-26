@@ -18,3 +18,9 @@ section#home {
 .hello span {
   color: #FF6978;
 }
+
+.search-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

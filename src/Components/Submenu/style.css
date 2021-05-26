@@ -9,6 +9,10 @@
   background-color: #fff;
 }
 
+.d-none {
+  display: none;
+}
+
 .submenu-item {
   display: flex;
   flex-direction: column;

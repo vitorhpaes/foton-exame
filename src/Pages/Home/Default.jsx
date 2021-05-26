@@ -28,13 +28,13 @@ function HomeDefault() {
   return <div>
     <h3 className="hello">Hi, <span className="username">{username}</span> 👋</h3>
     <HomeDefaultSection title="Discover new book" moreText="More">
-      {discoverBooks.map((book, key) => <DiscoverCard book={book.volumeInfo} key={key} />)}
+      {discoverBooks.map((book, key) => <DiscoverCard book={book} key={key} />)}
     </HomeDefaultSection>
     <HomeDefaultSection title="Currently Reading" moreText="All" overflow="visible">
-      {!!reading.length && <ReadingCard bookId={reading[0]} />}
+      {!!reading.length && <ReadingCard bookId={reading[reading.length-1]} />}
     </HomeDefaultSection>
     <HomeDefaultSection title="Reaviews of The Days" moreText="All Video">
-      {!!discoverBooks.length && <ReviewCard book={discoverBooks[0].volumeInfo} />}
+      {!!discoverBooks.length && <ReviewCard book={discoverBooks[0]} />}
     </HomeDefaultSection>
   </div>;
 

@@ -6,13 +6,14 @@ import './style.css';
 
 const Submenu = () => {
 
-  const { currentPage } = useNavigation();
+  const { currentPage, showSubmenu } = useNavigation();
 
-  return <nav className="submenu">
+  return <nav className={`submenu ${showSubmenu ? "" : "d-none"}`}>
     <SubmenuItem name="Home" icon={<Fi.FiHome/>} current={currentPage === 'Home'}/>
     <SubmenuItem name="Libraries" icon={<Fi.FiBook/>} current={currentPage === 'Libraries'}/>
     <SubmenuItem name="Profile" icon={<Fi.FiUser/>} current={currentPage === 'Profile'}/>
   </nav>;
+  
 }
 
 const SubmenuItem = ({ icon, name, current }) => {

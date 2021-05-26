@@ -1,9 +1,10 @@
 import './App.css';
-import Submenu from './Components/Submenu';
-import { NavProvider } from './Contexts/NavigationContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './Pages/Home';
+import { NavProvider } from './Contexts/NavigationContext';
 import { BookProvider } from './Contexts/BooksContext';
+import Home from './Pages/Home';
+import Book from './Pages/Book';
+import Submenu from './Components/Submenu';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <BookProvider>
           <Router>
             <Switch>
-              <Route path="/" component={Home}></Route>
+              <Route exact path="/" component={Home}></Route>
+              <Route exact path="/book/:id" component={Book}></Route>
             </Switch>
           </Router>
           <Submenu />
