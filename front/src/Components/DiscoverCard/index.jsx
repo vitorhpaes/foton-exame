@@ -8,7 +8,8 @@ import './style.css';
 function DiscoverCard({ book: completeInfo }) {
 
   const history = useHistory();
-  const book = completeInfo.volumeInfo;
+  const isMyBook = !completeInfo.volumeInfo;
+  const book = completeInfo.volumeInfo ? completeInfo.volumeInfo : completeInfo;
   const bookId = completeInfo.id;
 
   const randomColor = [

@@ -1,15 +1,17 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { submit as bookSubmit } from '../../Services/book';
 
 import './style.css';
 
 function AddBook() {
 
-  const handleBookSubmit = () => {
+  const handleBookSubmit = async (book) => {
+    const result = await bookSubmit(book);
+    if(!result.id) return alert('Cannot add book');
 
-    return alert('submit');
-
+    alert('Book inserted successfully!!');
   }
 
   const validationSchema = yup.object().shape({
@@ -60,7 +62,7 @@ function AddBook() {
         onChange={formik.handleChange}
       />
     </div>
-    <button className="submit-button">
+    <button className="submit-button" onClick={formik.handleSubmit}>
       Add new book
     </button>
   </section>;

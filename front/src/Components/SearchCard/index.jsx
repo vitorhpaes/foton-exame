@@ -7,15 +7,23 @@ import './style.css'
 function SearchCard({ book: completeInfo }) {
 
   const history = useHistory();
-  const book = completeInfo.volumeInfo;
+  const book = !completeInfo.volumeInfo ? completeInfo : completeInfo.volumeInfo;
   const bookId = completeInfo.id;
+  const isMyBook = !completeInfo.volumeInfo;
 
-  const authorsLength = !!book.authors && book.authors.length;
-  const firstAuthor = authorsLength ? book.authors[0] : "whitout authorship";
+  let authorsLength;
+  let firstAuthor;
+  if (!isMyBook) {
+    authorsLength = !!book.authors && book.authors.length;
+    firstAuthor = authorsLength ? book.authors[0] : "whitout authorship";
+  } else {
+    authorsLength = !!book.authors && book.authors.length;
+    firstAuthor = authorsLength ? book.authors[0].name : "whitout authorship";
+  }
 
   return <div className="search-card" onClick={() => history.push(`/book/${bookId}`)}>
     <div className="search-card-image">
-      <img src={!!book.imageLinks ? book.imageLinks.thumbnail : defaultImage}/>
+      <img src={!!book.imageLinks ? book.imageLinks.thumbnail : defaultImage} />
     </div>
     <div className="bookInfo">
       <h4 className="title">{book.title}</h4>

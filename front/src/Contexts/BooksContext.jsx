@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getVolumes } from '../Services/googleAPI';
+import { get as getMyBooks } from '../Services/book';
 
 const BookContext = createContext({});
 let timeoutLive = false;
@@ -21,15 +22,23 @@ export const BookProvider = ({ children }) => {
 
     setSearching(true);
 
-    if(timeoutLive) clearTimeout(timeoutLive);
+    if (timeoutLive) clearTimeout(timeoutLive);
 
     timeoutLive = setTimeout(() => {
       const doAsync = async () => {
         const result = await getVolumes(searchQuery);
-        setSearching(false);
-        if(result.totalItems === 0) return setSearchedBooks([]);
 
-        setSearchedBooks(result.items);
+        const myBooksResult = await getMyBooks(searchQuery);
+        let myBooks;
+        if (!myBooksResult) {
+          myBooks = [];
+        } else {
+          myBooks = myBooksResult.books
+        }
+
+        setSearching(false);
+        if (result.totalItems === 0) return setSearchedBooks([]);
+        setSearchedBooks([...myBooks, ...result.items]);
       }
       doAsync();
     }, 400);
@@ -38,7 +47,7 @@ export const BookProvider = ({ children }) => {
 
   const addReading = (newBookId) => {
 
-    if(reading.includes(newBookId)) return alert('This book is already in the current reading list');;
+    if (reading.includes(newBookId)) return alert('This book is already in the current reading list');;
 
     const newBooksReading = [...reading, newBookId];
     setReading(newBooksReading);
