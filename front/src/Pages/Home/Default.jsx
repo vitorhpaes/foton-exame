@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DiscoverCard from '../../Components/DiscoverCard';
 import HomeDefaultSection from '../../Components/HomeDefaultSection';
-import randomize from '../../Services/randomize';
 import { getVolumes } from '../../Services/googleAPI';
 import { useBook } from '../../Contexts/BooksContext';
 import ReadingCard from '../../Components/ReadingCard';
@@ -27,7 +26,7 @@ function HomeDefault() {
 
   return <div>
     <h3 className="hello">Hi, <span className="username">{username}</span> 👋</h3>
-    <HomeDefaultSection title="Discover new book" moreText="More">
+    <HomeDefaultSection title="Discover new book" moreText="More" showWave={true}>
       {discoverBooks.map((book, key) => <DiscoverCard book={book} key={key} />)}
     </HomeDefaultSection>
     <HomeDefaultSection title="Currently Reading" moreText="All" overflow="visible">

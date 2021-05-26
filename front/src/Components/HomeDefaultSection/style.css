@@ -1,12 +1,14 @@
 .home-default-section {
   margin: 0 18px 0 18px;
+  position: relative
 }
 
 .home-default-section .section-body {
   display: flex;
-  font-family: SFProText!important;
+  font-family: SFProText !important;
   font-weight: 900;
 }
+
 .home-default-section .title {
   width: 100%;
   display: flex;
@@ -14,9 +16,18 @@
   font-size: 18px;
   margin-bottom: 10px;
 }
+
 .home-default-section .title .link {
   margin-left: auto;
   margin-right: 20px;
   font-size: 14px;
   color: #4ABDF1;
+}
+
+.svg-wave-section {
+  position: absolute;
+  z-index: -1;
+  right: -50px;
+  top: 0;
+  width: 120px;
 }

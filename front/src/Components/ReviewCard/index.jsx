@@ -5,7 +5,7 @@ import './style.css';
 
 function ReviewCard() {
   return <div className="review-card">
-    <img src={manWithBookImage}/>
+    <img src={manWithBookImage} alt="decoration-man"/>
   </div>;
 }
 

@@ -8,7 +8,6 @@ import './style.css';
 function DiscoverCard({ book: completeInfo }) {
 
   const history = useHistory();
-  const isMyBook = !completeInfo.volumeInfo;
   const book = completeInfo.volumeInfo ? completeInfo.volumeInfo : completeInfo;
   const bookId = completeInfo.id;
 
@@ -33,14 +32,14 @@ function DiscoverCard({ book: completeInfo }) {
         {(!!book.authors && book.authors.length > 1) && <span> and more {book.authors.length - 1}</span>}
       </i>
       <div className="relevance">
-        <img src={chartIcon} className="icon" />
+        <img src={chartIcon} className="icon" alt="chart-icon" />
         120+
         <span>Read now</span>
       </div>
     </div>
 
     {book.imageLinks && <div className="book-image">
-      <img src={book.imageLinks.thumbnail}></img>
+      <img src={book.imageLinks.thumbnail} alt="book-thumbnail"></img>
     </div>}
 
   </div>);

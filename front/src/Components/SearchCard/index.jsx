@@ -23,7 +23,7 @@ function SearchCard({ book: completeInfo }) {
 
   return <div className="search-card" onClick={() => history.push(`/book/${bookId}`)}>
     <div className="search-card-image">
-      <img src={!!book.imageLinks ? book.imageLinks.thumbnail : defaultImage} />
+      <img src={!!book.imageLinks ? book.imageLinks.thumbnail : defaultImage} alt="book-thumb"/>
     </div>
     <div className="bookInfo">
       <h4 className="title">{book.title}</h4>

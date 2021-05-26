@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getBook } from '../../Services/googleAPI';
 import readingBookIcon from '../../Assets/images/reading_book.svg';
+import wave from '../../Assets/images/wave-reading.svg';
 
 import './style.css';
 
@@ -19,9 +20,10 @@ function ReadingCard({ bookId }) {
   }, [bookId]);
 
   return (<div className="reading-book-card">
+    <img src={wave} className="reading-wave" alt="wave-decoration"/>
 
     {(!!book && !!book.imageLinks) && <div className="book-image">
-      <img src={book.imageLinks.smallThumbnail}></img>
+      <img src={book.imageLinks.smallThumbnail} alt="book-thumbnail"></img>
     </div>}
 
     <div className="right-content" style={{ maxWidth: book.imageLinks ? "70%" : 'none' }}>
@@ -31,7 +33,7 @@ function ReadingCard({ bookId }) {
         {(!!book.authors && book.authors.length > 1) && <span> and more {book.authors.length - 1}</span>}
       </i>
       <div className="part">
-        <img src={readingBookIcon}/>
+        <img src={readingBookIcon} alt="reading-book-icon"/>
         Chapter <span>2</span> From 9
       </div>
     </div>

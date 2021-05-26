@@ -1,4 +1,5 @@
 .reading-book-card {
+  position: relative;
   background-color: #EEF5DB;
   /* background-color: #758644; */
 
@@ -76,4 +77,10 @@
 .reading-book-card .book-image img {
   max-height: 130px;
   margin-top: -30px;
+}
+.reading-wave {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  z-index: -1;
 }

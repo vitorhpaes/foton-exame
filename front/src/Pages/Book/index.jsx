@@ -41,7 +41,7 @@ function Book() {
     <div className="header">
       <Fi.FiArrowLeft class="return" onClick={returnPage} />
       <div className="book-image">
-        <img src={imageToUse} />
+        <img src={imageToUse} alt="book-thumb" />
       </div>
     </div>
     <div className="body">
@@ -55,13 +55,13 @@ function Book() {
           return <> {author}</>
         })}</b>
       </h6>
-      <p className="description" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(book.description)}}></p>
+      <p className="description" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(book.description) }}></p>
     </div>
-    <Footer bookId={id}/>
+    <Footer bookId={id} />
   </section>;
 }
 
-const Footer = ({bookId}) => {
+const Footer = ({ bookId }) => {
 
   const { addReading } = useBook();
 
