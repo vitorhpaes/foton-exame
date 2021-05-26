@@ -27,7 +27,7 @@ app.use('/api/book', book);
 //     return res.sendFile(path.join(__dirname, '../front/build', 'index.html'));
 // });
 
-app.listen(3000, () => {
+app.listen(3333, () => {
     console.log(`Aberto na porta 3333!`);
 });
 

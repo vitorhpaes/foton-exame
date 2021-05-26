@@ -5,6 +5,7 @@ import { BookProvider } from './Contexts/BooksContext';
 import Home from './Pages/Home';
 import Book from './Pages/Book';
 import Submenu from './Components/Submenu';
+import AddBook from './Pages/AddBook';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home}></Route>
               <Route exact path="/book/:id" component={Book}></Route>
+              <Route exact path="/addbook" component={AddBook}></Route>
             </Switch>
+            <Submenu />
           </Router>
-          <Submenu />
         </BookProvider>
       </NavProvider>
     </div>

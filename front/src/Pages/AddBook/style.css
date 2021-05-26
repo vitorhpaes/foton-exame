@@ -1,0 +1,62 @@
+section#addbook {
+  padding: 20px;
+}
+
+section#addbook .page-title {
+  color: #FF6978;
+  text-align: left;
+  margin-top: 53px;
+  margin-bottom: 57px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 38px;
+}
+
+.form-group label,
+.form-group span {
+  text-align: left;
+  font-family: SFProText;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-group span {
+  margin-top: 3px;
+  margin-left: 3px;
+  color: red;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #FDFCFC;
+  border: none;
+  box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.4926);
+  border-radius: 10px;
+  line-height: 18px;
+  font-size: 16px;
+  padding: 15px;
+  min-width: 100%;
+}
+
+.submit-button {
+  background-color: #FF6978;
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.4926);
+  border-radius: 10px;
+  font-family: SFProDisplay;
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
